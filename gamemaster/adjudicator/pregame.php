@@ -59,6 +59,7 @@ class adjudicatorPreGame
 		
 		// We are minimising the weights, so we pass in "false".
 		$assignment = $solver->hungarian($weights, false);
+		shuffle($assignment)
 		
 		$userCountries = array();
 		for($i = 0; $i < count($userIDs); $i++)
